@@ -1,7 +1,19 @@
 import style from "./style.module.scss";
-import { ToDoItem } from "../List";
+import { ToDoItem } from "../../Container/Container";
 
-const Row: React.FunctionComponent<ToDoItem> = ({ done, name }) => {
+interface RowProps {
+  done: boolean;
+  name: string;
+  deleteItem: (id: string) => void;
+  id: string;
+}
+
+const Row: React.FunctionComponent<RowProps> = ({
+  done,
+  name,
+  deleteItem,
+  id,
+}) => {
   // const Row: React.FunctionComponent<ToDoItem> = ({ item: {done, name} }) => {
   return (
     <div className={style.row}>
@@ -10,6 +22,7 @@ const Row: React.FunctionComponent<ToDoItem> = ({ done, name }) => {
           <input defaultChecked={done} type="checkbox"></input>
         </label>
         <input defaultValue={name} type="text"></input>
+        <button onClick={() => deleteItem(id)}>X</button>
       </li>
     </div>
   );
