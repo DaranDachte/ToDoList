@@ -1,24 +1,24 @@
 import style from "./style.module.scss";
 import Row from "./Row/Row";
+import type { ToDoItem } from "../Container/Container";
+import { makeid } from "../../Helpers/makeId";
 
-export type ToDoItem = {
-  done: boolean;
-  name: string;
-};
+interface ListProps {
+  items: ToDoItem[];
+  deleteItem: (id: string) => void;
+}
 
-const List = () => {
-  const items: ToDoItem[] = [
-    { done: false, name: "1" },
-    { done: false, name: "2" },
-    { done: false, name: "3" },
-  ];
+const List = (props: ListProps) => {
+  const { items, deleteItem } = props;
+
   return (
     <>
       <div> TODO list </div>
       <div>
         <ul>
           {items.map((item) => (
-            <Row key={item.name} {...item} />
+            <Row key={makeid(8)} {...item} deleteItem={deleteItem} />
+
             // Row  key = item.name  name=name done=done (раскрытый item)
             // Row key=item.name  item=item
           ))}
