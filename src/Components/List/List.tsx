@@ -6,22 +6,29 @@ import { makeid } from "../../Helpers/makeId";
 interface ListProps {
   items: ToDoItem[];
   deleteItem: (id: string) => void;
+  updateItem: (id: string) => void;
 }
 
 const List = (props: ListProps) => {
-  const { items, deleteItem } = props;
+  const { items, deleteItem, updateItem } = props;
 
+  //console.log(items);
+  //console.log(items.sort((a, b) => a.id.localeCompare(b.id)));
   return (
     <>
       <div> TODO list </div>
       <div>
         <ul>
-          {items.map((item) => (
-            <Row key={makeid(8)} {...item} deleteItem={deleteItem} />
-
-            // Row  key = item.name  name=name done=done (раскрытый item)
-            // Row key=item.name  item=item
-          ))}
+          {items
+            .sort((a, b) => a.id.localeCompare(b.id))
+            .map((item) => (
+              <Row
+                key={makeid(8)}
+                {...item}
+                deleteItem={deleteItem}
+                updateItem={updateItem}
+              />
+            ))}
         </ul>
       </div>
     </>

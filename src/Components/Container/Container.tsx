@@ -21,11 +21,21 @@ const Container = () => {
     setItems(items.filter((item) => item.id !== id));
   };
 
+  const updateItem = (id: string) => {
+    const filteredItem = items.filter((item) => item.id === id); // массив элементов туду айтем
+    // с как минимум одним элементом
+    const updatedItem = filteredItem.map((filteredItem) => ({
+      ...filteredItem,
+      done: !filteredItem.done,
+    }));
+    setItems(items.filter((item) => item.id !== id).concat(updatedItem));
+  };
+
   return (
     <div className={style.container}>
       <div>
         <Button onClick={() => addItem()} />
-        <List items={items} deleteItem={deleteItem} />
+        <List items={items} deleteItem={deleteItem} updateItem={updateItem} />
       </div>
     </div>
   );
