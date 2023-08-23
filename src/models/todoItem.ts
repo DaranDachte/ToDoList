@@ -3,3 +3,5 @@ export type ToDoItem = {
   name: string;
   id: string;
 };
+
+export type ToDoItems = ToDoItem[];
