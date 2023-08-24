@@ -1,7 +1,8 @@
 import style from "./style.module.scss";
 import { ToDoItem } from "../../Container/Container";
-import { ReactComponent as X } from "../../../assets/img/Xsigne.svg";
-
+import { ReactComponent as X } from "../../../assets/img/Xsign.svg";
+import { ReactComponent as DoneSign } from "../../../assets/img/DoneSign.svg";
+import { ReactComponent as EmptySign } from "../../../assets/img/EmptySign.svg";
 interface RowProps {
   done: boolean;
   name: string;
@@ -28,11 +29,13 @@ const Row: React.FunctionComponent<RowProps> = ({
             type="checkbox"
           ></input>
         </label>
-        <span>{name}</span>
+        <span className={done ? style.doneField : style.doField}>{name}</span>
+      </li>
+      <div className={style.xButton}>
         <button onClick={() => deleteItem(id)}>
           <X />
         </button>
-      </li>
+      </div>
     </div>
   );
 };

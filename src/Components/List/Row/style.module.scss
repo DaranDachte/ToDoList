@@ -1,3 +1,45 @@
 .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+  width: 33.75rem;
+  height: 4rem;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e3e4f1;
+  background: #fff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+
+.doField {
+  color: #494c6b;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  padding-left: 1rem;
+}
+
+.doneField {
+  color: #d1d2da;
+  padding-left: 1rem;
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.25px;
+  text-decoration-line: line-through;
+}
+
+.xButton {
+}
+
+button {
+  background-color: #fff;
+  border: none;
 }
