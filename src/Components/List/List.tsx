@@ -16,8 +16,7 @@ const List = (props: ListProps) => {
   //console.log(items.sort((a, b) => a.id.localeCompare(b.id)));
   return (
     <>
-      <div> TODO list </div>
-      <div>
+      <div className={style.list}>
         <ul>
           {items
             .sort((a, b) => a.id.localeCompare(b.id))

@@ -1,0 +1,42 @@
+.allActiveCompleted {
+  display: flex;
+  justify-content: space-between;
+}
+ul > li {
+  display: inline;
+  margin: 1rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+.all:hover {
+  cursor: pointer;
+  color: #494c6b;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.194px;
+}
+
+.active:hover {
+  cursor: pointer;
+  color: #494c6b;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.194px;
+}
+.completed:hover {
+  cursor: pointer;
+  color: #494c6b;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.194px;
+}
