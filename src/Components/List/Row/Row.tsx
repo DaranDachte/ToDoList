@@ -31,6 +31,7 @@ const Row: React.FunctionComponent<RowProps> = ({
         </label>
         <span className={done ? style.doneField : style.doField}>{name}</span>
       </li>
+
       <div className={style.xButton}>
         <button onClick={() => deleteItem(id)}>
           <X />

@@ -1,6 +1,7 @@
 import Container from "./Components/Container/Container";
 import Header from "./Components/Header/Header";
-import "./App.scss";
+import Footer from "./Components/Footer/Footer";
+import style from "./style.module.scss";
 import { ApplicationContext } from "./store";
 import { makeid } from "./Helpers/makeId";
 import { useState } from "react";
@@ -31,11 +32,14 @@ function App() {
   const ctxValue = { items, addItem, deleteItem, updateItem };
 
   return (
-    <div>
-      <ApplicationContext.Provider value={ctxValue}>
-        <Header />
-        <Container />
-      </ApplicationContext.Provider>
+    <div className={style.wrapper}>
+      <div className={style.appWrapper}>
+        <ApplicationContext.Provider value={ctxValue}>
+          <Header />
+          <Container />
+          <Footer />
+        </ApplicationContext.Provider>
+      </div>
     </div>
   );
 }

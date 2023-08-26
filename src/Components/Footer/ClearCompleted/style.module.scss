@@ -1,0 +1,21 @@
+.clearCompleted {
+  color: #9495a5;
+  text-align: right;
+  font-family: Josefin Sans;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01213rem;
+
+  &:hover {
+    cursor: pointer;
+    color: #494c6b;
+    font-family: Josefin Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.194px;
+  }
+}

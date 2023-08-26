@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ApplicationContext } from "../../store";
+import style from "./style.module.scss";
 
 const ENTER_KEY = "Enter";
 
@@ -12,7 +13,7 @@ const Header = () => {
     }
   };
   return (
-    <div>
+    <div className={style.header}>
       <input
         type="text"
         placeholder="Create a new todo..."
