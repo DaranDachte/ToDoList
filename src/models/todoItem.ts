@@ -5,3 +5,5 @@ export type ToDoItem = {
 };
 
 export type ToDoItems = ToDoItem[];
+
+export type FilterType = "All" | "Active" | "Completed";
