@@ -1,16 +1,16 @@
 import style from "./style.module.scss";
 import Row from "./Row/Row";
-import type { ToDoItem } from "../Container/Container";
+import type { ToDoItem } from "../../models/todoItem";
 import { makeid } from "../../Helpers/makeId";
 
 interface ListProps {
-  items: ToDoItem[];
+  filteredItems: ToDoItem[];
   deleteItem: (id: string) => void;
   updateItem: (id: string) => void;
 }
 
 const List = (props: ListProps) => {
-  const { items, deleteItem, updateItem } = props;
+  const { filteredItems, deleteItem, updateItem } = props;
 
   //console.log(items);
   //console.log(items.sort((a, b) => a.id.localeCompare(b.id)));
@@ -18,7 +18,7 @@ const List = (props: ListProps) => {
     <>
       <div className={style.list}>
         <ul>
-          {items
+          {filteredItems
             .sort((a, b) => a.id.localeCompare(b.id))
             .map((item) => (
               <Row

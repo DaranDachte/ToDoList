@@ -1,7 +1,7 @@
 import List from "../List/List";
 import style from "./style.module.scss";
 import { useContext } from "react";
-import { ApplicationContext } from "../../store";
+import { ApplicationContext } from "../../store/applicationContext";
 
 const Container = () => {
   const appCtx = useContext(ApplicationContext);

@@ -1,15 +1,23 @@
 import { createContext } from "react";
-import { ToDoItems } from "../models/todoItem";
+import { FilterType, ToDoItems } from "../models/todoItem";
 
 type CtxValue = {
   items: ToDoItems;
   addItem: (name: string) => void;
   updateItem: (id: string) => void;
   deleteItem: (id: string) => void;
+  currentFilter: FilterType;
+  updateFilter: (name: FilterType) => void;
+  fullItems: ToDoItems;
 };
 
 export const ApplicationContext = createContext<CtxValue>({
+  updateFilter: function (name: FilterType): void {
+    throw new Error("Function not implemented.".concat(name));
+  },
+  currentFilter: "All",
   items: [],
+  fullItems: [],
   addItem: function (name: string): void {
     throw new Error("Function not implemented.".concat(name));
   },

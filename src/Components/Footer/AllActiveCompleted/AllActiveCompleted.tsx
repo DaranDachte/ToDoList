@@ -1,12 +1,37 @@
 import style from "./style.module.scss";
+import { useContext } from "react";
+import { ApplicationContext } from "../../../store/applicationContext";
 
 const AllActiveCompleted = () => {
+  const appctx = useContext(ApplicationContext);
+
   return (
     <div className={style.allActiveCompleted}>
       <ul className={style.ulStyle}>
-        <li className={style.all}>All</li>
-        <li className={style.active}>Active</li>
-        <li className={style.completed}>Completed</li>
+        <li
+          onClick={() => appctx.updateFilter("All")}
+          className={`${style.all}  ${
+            appctx.currentFilter === "All" ? style.selectedFilter : ""
+          }`}
+        >
+          All
+        </li>
+        <li
+          onClick={() => appctx.updateFilter("Active")}
+          className={`${style.active}  ${
+            appctx.currentFilter === "Active" ? style.selectedFilter : ""
+          }`}
+        >
+          Active
+        </li>
+        <li
+          onClick={() => appctx.updateFilter("Completed")}
+          className={`${style.completed}  ${
+            appctx.currentFilter === "Completed" ? style.selectedFilter : ""
+          }`}
+        >
+          Completed
+        </li>
       </ul>
     </div>
   );
