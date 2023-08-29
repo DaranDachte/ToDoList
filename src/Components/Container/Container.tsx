@@ -9,7 +9,7 @@ const Container = () => {
     <div className={style.container}>
       <div>
         <List
-          filteredItems={appCtx.items}
+          filteredItems={appCtx.filteredItems}
           deleteItem={appCtx.deleteItem}
           updateItem={appCtx.updateItem}
         />
