@@ -4,7 +4,7 @@ import { ApplicationContext } from "../../../store/applicationContext";
 
 const AllActiveCompleted = () => {
   const appctx = useContext(ApplicationContext);
-
+  console.log(appctx);
   return (
     <div className={style.allActiveCompleted}>
       <ul className={style.ulStyle}>

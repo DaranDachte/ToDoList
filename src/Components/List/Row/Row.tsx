@@ -1,8 +1,9 @@
 import style from "./style.module.scss";
-import { ToDoItem } from "../../Container/Container";
+
 import { ReactComponent as X } from "../../../assets/img/Xsign.svg";
 import { ReactComponent as DoneSign } from "../../../assets/img/DoneSign.svg";
 import { ReactComponent as EmptySign } from "../../../assets/img/EmptySign.svg";
+
 interface RowProps {
   done: boolean;
   name: string;
