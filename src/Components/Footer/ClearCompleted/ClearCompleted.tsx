@@ -4,9 +4,10 @@ import { ApplicationContext } from "../../../store/applicationContext";
 
 const ClearCompleted = () => {
   const appctx = useContext(ApplicationContext);
+
   return (
     <div className={style.clearCompleted}>
-      <span>Clear completed</span>
+      <p onClick={() => appctx.clearCompleted()}>Clear completed</p>
     </div>
   );
 };
