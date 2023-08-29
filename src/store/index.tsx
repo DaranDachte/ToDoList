@@ -53,12 +53,12 @@ export function ApplicationContextProvider({
     fullItems: items,
     filteredItems:
       currentFilter === "All" ? items : items.filter(filterMap[currentFilter]),
-
     addItem,
     deleteItem,
     updateItem,
     updateFilter,
     currentFilter,
+    items,
   };
 
   return (
