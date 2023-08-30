@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { ToDoItems } from "../models/todoItem";
-import { FilterType } from "../models/todoItem";
+import { ToDoItems } from "../models/domain";
+import { FilterType } from "../models/domain";
 import { makeid } from "../Helpers/makeId";
 import { ApplicationContext } from "./applicationContext";
-import { ToDoItem } from "../models/todoItem";
+import { ToDoItem } from "../models/domain";
 
 type ApplicationContextProviderProps = {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ export function ApplicationContextProvider({
   // Active равно элементы done с состоянием false
   // Completed равно элементы done  с состоянием true
 
-  const clearCompleted = (name: string) => {
+  const clearCompleted = (id: string) => {
     const removeCompleted = items.filter((item) => !item.done);
     setItems(removeCompleted);
   };

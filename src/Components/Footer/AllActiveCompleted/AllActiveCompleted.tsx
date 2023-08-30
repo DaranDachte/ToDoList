@@ -4,7 +4,6 @@ import { ApplicationContext } from "../../../store/applicationContext";
 
 const AllActiveCompleted = () => {
   const appctx = useContext(ApplicationContext);
-  console.log(appctx);
   return (
     <div className={style.allActiveCompleted}>
       <ul className={style.ulStyle}>
@@ -18,7 +17,7 @@ const AllActiveCompleted = () => {
         </li>
         <li
           onClick={() => appctx.updateFilter("Active")}
-          className={`${style.active}  ${
+          className={`${style.all}  ${
             appctx.currentFilter === "Active" ? style.selectedFilter : ""
           }`}
         >
@@ -26,7 +25,7 @@ const AllActiveCompleted = () => {
         </li>
         <li
           onClick={() => appctx.updateFilter("Completed")}
-          className={`${style.completed}  ${
+          className={`${style.all}  ${
             appctx.currentFilter === "Completed" ? style.selectedFilter : ""
           }`}
         >

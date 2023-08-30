@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { FilterType, ToDoItems, ToDoItem } from "../models/todoItem";
+import { FilterType, ToDoItems, ToDoItem } from "../models/domain";
 
 type CtxValue = {
   filteredItems: ToDoItem[];
@@ -10,7 +10,7 @@ type CtxValue = {
   currentFilter: FilterType;
   updateFilter: (name: FilterType) => void;
   fullItems: ToDoItems;
-  clearCompleted: ToDoItems;
+  clearCompleted: (id: string) => void;
 };
 
 export const ApplicationContext = createContext<CtxValue>({
