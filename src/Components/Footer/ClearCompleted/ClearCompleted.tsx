@@ -7,7 +7,7 @@ const ClearCompleted = () => {
 
   return (
     <div className={style.clearCompleted}>
-      <p onClick={() => appctx.clearCompleted()}>Clear completed</p>
+      <span onClick={() => appctx.clearCompleted()}>Clear completed</span>
     </div>
   );
 };

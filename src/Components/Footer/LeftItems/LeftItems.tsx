@@ -1,7 +1,7 @@
 import style from "./style.module.scss";
 import { useContext } from "react";
 import { ApplicationContext } from "../../../store/applicationContext";
-import { ToDoItems } from "../../../models/todoItem";
+import { ToDoItems } from "../../../models/domain";
 
 const LeftItems = () => {
   const appctx = useContext(ApplicationContext);

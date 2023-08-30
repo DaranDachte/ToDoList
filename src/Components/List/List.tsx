@@ -1,6 +1,6 @@
 import style from "./style.module.scss";
 import Row from "./Row/Row";
-import type { ToDoItem } from "../../models/todoItem";
+import type { ToDoItem } from "../../models/domain";
 import { makeid } from "../../Helpers/makeId";
 
 interface ListProps {
