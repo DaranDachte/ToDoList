@@ -19,7 +19,7 @@ export function ApplicationContextProvider({
   // Active равно элементы done с состоянием false
   // Completed равно элементы done  с состоянием true
 
-  const clearCompleted = (id: string) => {
+  const clearCompleted = () => {
     const removeCompleted = items.filter((item) => !item.done);
     setItems(removeCompleted);
   };
@@ -63,7 +63,6 @@ export function ApplicationContextProvider({
     updateItem,
     updateFilter,
     currentFilter,
-    items,
     clearCompleted,
   };
 

@@ -4,14 +4,22 @@
   padding: 0;
 }
 
-body {
-  //background-image: url("./assets/img/DayHeaderBackground.png");
-}
 .wrapper {
   display: flex;
   width: 100%;
   height: 100vh;
-  background: #fafafa;
+  // background: #fafafa;
+  background-image: url("./assets/img/dayPicture.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #fff;
+  font-family: Josefin Sans;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.9375rem;
 }
 
 .appWrapper {
@@ -20,6 +28,7 @@ body {
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
+  margin-top: 10rem;
   width: 33.75rem;
   height: 27.4375rem;
   flex-shrink: 0;
