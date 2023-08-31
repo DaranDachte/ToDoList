@@ -3,14 +3,13 @@ import { FilterType, ToDoItems, ToDoItem } from "../models/domain";
 
 type CtxValue = {
   filteredItems: ToDoItem[];
-  items: ToDoItems;
   addItem: (name: string) => void;
   updateItem: (id: string) => void;
   deleteItem: (id: string) => void;
   currentFilter: FilterType;
   updateFilter: (name: FilterType) => void;
   fullItems: ToDoItems;
-  clearCompleted: (id: string) => void;
+  clearCompleted: () => void;
 };
 
 export const ApplicationContext = createContext<CtxValue>({
@@ -18,7 +17,6 @@ export const ApplicationContext = createContext<CtxValue>({
     throw new Error("Function not implemented.".concat(name));
   },
   currentFilter: "All",
-  items: [],
   fullItems: [],
   addItem: function (name: string): void {
     throw new Error("Function not implemented.".concat(name));
@@ -31,6 +29,6 @@ export const ApplicationContext = createContext<CtxValue>({
   },
   filteredItems: [],
   clearCompleted: function (): void {
-    throw new Error("Function not implemented.".concat(id));
+    throw new Error("Function not implemented.");
   },
 });

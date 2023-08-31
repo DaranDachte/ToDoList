@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ApplicationContext } from "../../store/applicationContext";
 import style from "./style.module.scss";
+import { ReactComponent as Moon } from "../../assets/img/Moon.svg";
 
 const ENTER_KEY = "Enter";
 
@@ -13,14 +14,16 @@ const Header = () => {
     }
   };
   return (
-    <div className={style.header}>
-      <input
-        className={style.input}
-        type="text"
-        placeholder="Create a new todo..."
-        onKeyUp={onKeyUnpressed}
-      />
-    </div>
+    <>
+      <div className={style.header}>
+        <input
+          className={style.input}
+          type="text"
+          placeholder="Create a new todo..."
+          onKeyUp={onKeyUnpressed}
+        />
+      </div>
+    </>
   );
 };
 

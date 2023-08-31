@@ -11,3 +11,5 @@ export function makeid(length: number) {
 
   return result;
 }
+
+//export const makeid = (salt: number) => Date.now() + salt;
