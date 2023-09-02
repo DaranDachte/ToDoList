@@ -7,8 +7,42 @@
   font-family: Josefin Sans, normal;
 }
 
+html {
+  --light-background-image: url("./assets/img/dayPicture.jpg");
+  --dark-background-image: url("./assets/img/nightPicture.jpg");
+  --light-font-color: #494c6b;
+  --dark-font-color: #c8cbe7;
+  --light-background-color: #fafafa;
+  --dark-background-color: #171823;
+  --light-row-color: #ffffff;
+  --dark-row-color: #25273d;
+  --light-footer-font-color: #9495a5;
+  --dark-footer-font-color: #5b5e7e;
+  --dark-shadow-box: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  --light-shadow-box: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+
+body[theme="Light"] {
+  --background-image: var(--light-background-image);
+  --font-color: var(--light-font-color);
+  --background-color: var(--light-background-color);
+  --row-color: var(--light-row-color);
+  --footer-font-color: var(--light-footer-font-color);
+  --shadow-box: var(--light-shadow-box);
+}
+
+body[theme="Dark"] {
+  --background-image: var(--dark-background-image);
+  --font-color: var(--dark-font-color);
+  --background-color: var(--dark-background-color);
+  --row-color: var(--dark-row-color);
+  --footer-font-color: var(--dark-footer-font-color);
+  --shadow-box: var(--dark-shadow-box);
+}
+
 body {
-  background-image: url("./assets/img/dayPicture.jpg");
+  background-image: var(--background-image);
+  background-color: var(--background-color);
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100%;

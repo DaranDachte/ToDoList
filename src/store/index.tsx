@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ToDoItems } from "../models/domain";
 import { FilterType } from "../models/domain";
 import { makeid } from "../Helpers/makeId";
 import { ApplicationContext } from "./applicationContext";
 import { ToDoItem } from "../models/domain";
+import { ReactComponent as Moon } from "../assets/img/Moon.svg";
+import { ReactComponents as Sun } from "../assets/img/Sun.svg";
 
 type ApplicationContextProviderProps = {
   children: React.ReactNode;
@@ -14,6 +16,11 @@ export function ApplicationContextProvider({
 }: ApplicationContextProviderProps) {
   const [items, setItems] = useState<ToDoItems>([]);
   const [currentFilter, setCurrentFilter] = useState<FilterType>("All");
+  const [switchedOn, setSwitchedOn] = useState(false);
+
+  useEffect(() => {
+    document.body.setAttribute("theme", switchedOn ? "Dark" : "Light");
+  }, [switchedOn]);
 
   // All равно все элементы
   // Active равно элементы done с состоянием false
@@ -54,6 +61,10 @@ export function ApplicationContextProvider({
     Completed: (item: ToDoItem) => item.done,
   };
 
+  const handlerChangeTheme = () => {
+    setSwitchedOn((prevVal) => !prevVal);
+  };
+
   const ctxValue = {
     fullItems: items,
     filteredItems:
@@ -64,6 +75,8 @@ export function ApplicationContextProvider({
     updateFilter,
     currentFilter,
     clearCompleted,
+    switchedOn,
+    handlerChangeTheme,
   };
 
   return (
