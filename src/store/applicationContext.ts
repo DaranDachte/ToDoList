@@ -10,6 +10,8 @@ type CtxValue = {
   updateFilter: (name: FilterType) => void;
   fullItems: ToDoItems;
   clearCompleted: () => void;
+  handlerChangeTheme: () => void;
+  switchedOn: boolean;
 };
 
 export const ApplicationContext = createContext<CtxValue>({
@@ -31,4 +33,9 @@ export const ApplicationContext = createContext<CtxValue>({
   clearCompleted: function (): void {
     throw new Error("Function not implemented.");
   },
+
+  handlerChangeTheme: function (): void {
+    throw new Error("Function not implemented.");
+  },
+  switchedOn: false,
 });
