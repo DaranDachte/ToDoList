@@ -10,11 +10,11 @@
 
   &:hover {
     cursor: pointer;
-    color: #494c6b;
+    color: var(--hover-color);
     font-family: Josefin Sans;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: -0.194px;
   }
