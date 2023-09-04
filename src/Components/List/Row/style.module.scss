@@ -8,12 +8,17 @@
   width: 100%;
   height: 4rem;
   flex-shrink: 0;
-  border-bottom: 1px solid #e3e4f1;
-  background: #fff;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--container-background);
+
+  & li {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .doField {
-  color: #494c6b;
+  color: var(--font-color);
   font-family: Josefin Sans;
   font-size: 1.125rem;
   font-style: normal;
@@ -24,7 +29,7 @@
 }
 
 .doneField {
-  color: #d1d2da;
+  color: var(--font-color);
   padding-left: 1rem;
   font-family: Josefin Sans;
   font-size: 1.125rem;
@@ -38,4 +43,27 @@
 button {
   background-color: #fff;
   border: none;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+svg {
+  & g:first {
+    circle {
+      fill: var(--container-background);
+    }
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }

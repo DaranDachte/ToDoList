@@ -12,6 +12,7 @@ const AllActiveCompleted = () => {
       <ul className={style.ulStyle}>
         {allActiveCompletedArray.map((name) => (
           <li
+            key={name}
             onClick={() => appctx.updateFilter(name)}
             className={`${style.all}  ${
               appctx.currentFilter === name ? style.selectedFilter : ""

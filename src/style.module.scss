@@ -20,6 +20,14 @@ html {
   --dark-footer-font-color: #5b5e7e;
   --dark-shadow-box: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
   --light-shadow-box: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  --light-container-background-color: #ffffff;
+  --dark-container-background-color: #494c6b;
+  --light-input-color: #9495a5;
+  --dark-input-color: #767992;
+  --light-border-color: #e3e4f1;
+  --dark-border-color: #393a4b;
+  --light-hover-color: #494c6b;
+  --dark-hover-color: #e3e4f1;
 }
 
 body[theme="Light"] {
@@ -29,6 +37,10 @@ body[theme="Light"] {
   --row-color: var(--light-row-color);
   --footer-font-color: var(--light-footer-font-color);
   --shadow-box: var(--light-shadow-box);
+  --container-background: var(--light-container-background-color);
+  --input-color: var(--light-input-color);
+  --border-color: var(--light-border-color);
+  --hover-color: var(--light-hover-color);
 }
 
 body[theme="Dark"] {
@@ -38,6 +50,10 @@ body[theme="Dark"] {
   --row-color: var(--dark-row-color);
   --footer-font-color: var(--dark-footer-font-color);
   --shadow-box: var(--dark-shadow-box);
+  --container-background: var(--dark-container-background-color);
+  --input-color: var(--dark-input-color);
+  --border-color: var(--dark-border-color);
+  --hover-color: var(--dark-hover-color);
 }
 
 body {
