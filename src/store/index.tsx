@@ -4,8 +4,6 @@ import { FilterType } from "../models/domain";
 import { makeid } from "../Helpers/makeId";
 import { ApplicationContext } from "./applicationContext";
 import { ToDoItem } from "../models/domain";
-import { ReactComponent as Moon } from "../assets/img/Moon.svg";
-import { ReactComponents as Sun } from "../assets/img/Sun.svg";
 
 type ApplicationContextProviderProps = {
   children: React.ReactNode;
