@@ -44,14 +44,18 @@ const Row: React.FunctionComponent<RowProps> = ({
           type="checkbox"
         ></input>
         <label htmlFor={`DoCheckbox-${id}`}>
-          {done ? <DoneCircle /> : <EmptyCircle />}
+          {done ? (
+            <DoneCircle />
+          ) : (
+            <EmptyCircle className={style.emptyCircle} />
+          )}
         </label>
         <span className={done ? style.doneField : style.doField}>{name}</span>
       </li>
 
       <div className={showButton ? style.show : style.hide}>
         <button onClick={() => deleteItem(id)}>
-          <X />
+          <X className={style.currentFill} />
         </button>
       </div>
     </div>

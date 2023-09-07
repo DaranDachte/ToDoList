@@ -16,7 +16,7 @@ const List = (props: ListProps) => {
   //console.log(items.sort((a, b) => a.id.localeCompare(b.id)));
   return (
     <>
-      <div className={style.list}>
+      <div className={`${style.list} ${style.scroll}`}>
         <ul>
           {filteredItems
             .sort((a, b) => a.id.localeCompare(b.id))

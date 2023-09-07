@@ -52,10 +52,16 @@ input[type="checkbox"] {
   position: absolute;
 }
 
-svg {
-  & g:first {
+.emptyCircle {
+  & g {
     circle {
+      stroke: #393a4b;
       fill: var(--container-background);
+    }
+  }
+  &:hover g {
+    circle {
+      stroke: url(paint1_linear_0_155);
     }
   }
 }
@@ -66,4 +72,16 @@ svg {
 
 .hide {
   display: none;
+}
+
+.currentFill {
+  & g {
+    path {
+      stroke: var(--hover-color);
+    }
+  }
+}
+
+button {
+  background-color: var(--container-background);
 }
