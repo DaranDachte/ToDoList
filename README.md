@@ -1,4 +1,4 @@
-No Junior Web developer is without a Todo app... The idea and design were taken from https://www.frontendmentor.io.
+No Junior Web developer is without a Todo app...
 
 In this work i used
 <ul>
