@@ -1,27 +1,10 @@
-# React + TypeScript + Vite
+1. Подготовка проекта: инсталлируем Vite, убираем ненужные файлы, добавляем нужные нам Плагины для работы с SVG и React. Создаем файл custom.d.ts, где объявляем модули для SVG и SCSS.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Создаем компоненты на уровне файлов и папок, подсоединяем их друг к другу, чтобы понять будущую структуру проекта.
 
-Currently, two official plugins are available:
+3. Так как мы предполагаем использовать Context, мы создаем папку store, где создаем два файла. В одном мы объявляем Контекст (src/store/applicationContext.ts), у которого есть объект вместе с типами и заглушками(они нужны, если мы забудем реализовать функцию). Во втором файле (src/store/index.tsx) мы создаем ApplicationContextProvider, где размещаем все наши стейты, а также создаем конкретные функции для управления данными (типы данных находятся в созданном нами файле src/models/domain.ts).
+   В конце мы создаем объект Контекста ( в данном случае это ctxValue), который будет использоваться приложением внутри компонентов.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+4. Теперь нам нужно связать Контекст с компонентами, и для этого нужно использовать хук useContext. Этот хук мы вызываем в компонентах.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+5. Для того, чтобы это работало, необходимо обернуть наши компоненты в <ApplicationContextProvider>.
