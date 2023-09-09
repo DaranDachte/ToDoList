@@ -55,13 +55,13 @@ input[type="checkbox"] {
 .emptyCircle {
   & g {
     circle {
-      stroke: #393a4b;
+      stroke: #e3e4f1;
       fill: var(--container-background);
     }
   }
   &:hover g {
     circle {
-      stroke: url(paint1_linear_0_155);
+      stroke: #393a4b;
     }
   }
 }
