@@ -1,9 +1,9 @@
 import { useState } from "react";
 import style from "./style.module.scss";
 
-import { ReactComponent as X } from "../../../assets/img/Xsign.svg";
-import { ReactComponent as DoneCircle } from "../../../assets/img/DoneCirle.svg";
-import { ReactComponent as EmptyCircle } from "../../../assets/img/EmptyCirlce.svg";
+import X from "../../../assets/img/Xsign.svg";
+import DoneCircle from "../../../assets/img/DoneCirle.svg";
+import EmptyCircle from "../../../assets/img/EmptyCirlce.svg";
 
 interface RowProps {
   done: boolean;
@@ -45,9 +45,13 @@ const Row: React.FunctionComponent<RowProps> = ({
         ></input>
         <label htmlFor={`DoCheckbox-${id}`}>
           {done ? (
-            <DoneCircle />
+            <img src={DoneCircle} alt="DoneCircle" />
           ) : (
-            <EmptyCircle className={style.emptyCircle} />
+            <img
+              src={EmptyCircle}
+              className={style.emptyCircle}
+              alt="EmptyCircle"
+            />
           )}
         </label>
         <span className={done ? style.doneField : style.doField}>{name}</span>
@@ -55,7 +59,7 @@ const Row: React.FunctionComponent<RowProps> = ({
 
       <div className={showButton ? style.show : style.hide}>
         <button onClick={() => deleteItem(id)}>
-          <X className={style.currentFill} />
+          <img className={style.currentFill} src={X} alt="X" />
         </button>
       </div>
     </div>

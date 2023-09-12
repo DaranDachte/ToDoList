@@ -1,5 +1,3 @@
-import style from "./style.module.scss";
-
 interface ButtonProps {
   onClick: () => void;
 }

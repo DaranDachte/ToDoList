@@ -6,10 +6,10 @@ const ENTER_KEY = "Enter";
 
 const Header = () => {
   const appctx = useContext(ApplicationContext);
-  const onKeyUnpressed = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onKeyUnpressed = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === ENTER_KEY) {
-      appctx.addItem(event.target.value);
-      event.target.value = "";
+      appctx.addItem(event.currentTarget.value);
+      event.currentTarget.value = "";
     }
   };
   return (
