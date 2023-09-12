@@ -1,6 +1,7 @@
 import style from "./style.module.scss";
-import { ReactComponent as Moon } from "../../assets/img/Moon.svg";
-import { ReactComponent as Sun } from "../../assets/img/Sun.svg";
+import Moon from "../../assets/img/Moon.svg";
+import Sun from "../../assets/img/Sun.svg";
+
 import { useContext } from "react";
 import { ApplicationContext } from "../../store/applicationContext";
 
@@ -14,9 +15,9 @@ const Title = () => {
       <h2>TODO</h2>
       <div onClick={ChangeThemeOnClick} className={style.toggler}>
         {appCtx.switchedOn ? (
-          <Sun className={style.sun} />
+          <img className={style.sun} src={Sun} alt="Sun" />
         ) : (
-          <Moon className={style.moon} />
+          <img className={style.moon} src={Moon} alt="Moon" />
         )}
       </div>
     </div>

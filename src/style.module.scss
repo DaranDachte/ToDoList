@@ -8,8 +8,8 @@
 }
 
 html {
-  --light-background-image: url("./assets/img/dayPicture.jpg");
-  --dark-background-image: url("./assets/img/nightPicture.jpg");
+  --light-background-image: url("./assets/img/newDay.jpg");
+  --dark-background-image: url("./assets/img/newNight.jpg");
   --light-font-color: #494c6b;
   --dark-font-color: #c8cbe7;
   --light-background-color: #fafafa;
@@ -20,11 +20,11 @@ html {
   --dark-footer-font-color: #5b5e7e;
   --dark-shadow-box: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
   --light-shadow-box: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
-  --light-container-background-color: #ffffff;
+  --light-container-background-color: #e3e4f1;
   --dark-container-background-color: #494c6b;
   --light-input-color: #9495a5;
   --dark-input-color: #767992;
-  --light-border-color: #e3e4f1;
+  --light-border-color: #cfd0de;
   --dark-border-color: #393a4b;
   --light-hover-color: #494c6b;
   --dark-hover-color: #e3e4f1;
@@ -59,9 +59,8 @@ body[theme="Dark"] {
 body {
   background-image: var(--background-image);
   background-color: var(--background-color);
-  background-position: top;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   width: 100%;
   height: 100vh;
 }
