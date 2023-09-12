@@ -9,5 +9,6 @@ In this work i used
 
 ![image](https://github.com/DaranDachte/ToDoList/assets/96144068/17d10cc4-52df-4f1c-8eed-e684da87d125)
 
-![image](https://github.com/DaranDachte/ToDoList/assets/96144068/5fd7d214-3313-4500-851a-7a8e15a83bf8)
+![image](https://github.com/DaranDachte/ToDoList/assets/96144068/9f1544c1-eb1b-41ed-8c32-d72200071c87)
+
 
